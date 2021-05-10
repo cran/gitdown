@@ -1,3 +1,7 @@
+# gitdown 0.1.2
+
+* Protect from older Pandoc versions
+
 # gitdown 0.1.1
 
 * Improve documentation
