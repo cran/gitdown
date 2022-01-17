@@ -1,7 +1,7 @@
-0b95444ca00ab77e5ba2033fcf031535 *DESCRIPTION
+16c45bce2642e6d4d13e60fff0474cdc *DESCRIPTION
 05b244661505b5129abd2d115a783f4c *LICENSE
 2bd997e9374af1c1f127f3f7487aef92 *NAMESPACE
-4199204a30ebb2e061f2eb283275ef4e *NEWS.md
+f77c9c5db5591c972d0a7609751b6688 *NEWS.md
 d9af3805f431d8e0341baaae6ef3617e *R/fake_repo.R
 9e68d69937226997d302fe271ce8ad1d *R/get_commits.R
 b13417beca54ccfd363c88c48d6f8805 *R/get_info_files.R
@@ -11,14 +11,14 @@ eda77e4442ce643191d78c9716a7005f *R/gitdown-package.R
 7b3a1f8214e1fce8d8e935d7820622e5 *R/utils-pipe.R
 bf376b64149c4797dcfa3ad5f7997a25 *R/utils.R
 2288ecbe7aab8cf56b04b7081c9e0c33 *README.md
-a162cf87b6bfaee7df312e55ed48f17d *build/vignette.rds
+a2cc5914c721138298f0b62e6aef6ce6 *build/vignette.rds
 25b4ad6dfbd4fa6e4840540a1d308585 *inst/booktemplate/_bookdown.yml
 fc8c5d20c280d85b87855d171c17e737 *inst/booktemplate/_output.yml
 4b412e53c37b8a4edadba33feb65485b *inst/booktemplate/index.Rmd
 ed4c374719a1a21a45a343ae4a36bce4 *inst/booktemplate/style.css
 51c23375d469d2676b9ffb151657e1c9 *inst/doc/ab-create-git_down.R
 d0ee73496ad8763d6885b402f7fce903 *inst/doc/ab-create-git_down.Rmd
-670b087b2f9e8383a0257dfb39507f7a *inst/doc/ab-create-git_down.html
+f927ed8b0cf9a731650bb821b7ab5bcb *inst/doc/ab-create-git_down.html
 2f4f2eba3aa1f04d5885c416a1b5d357 *inst/template/modification_files.Rmd
 89bafb2ba6410e17d17938c3f69d28a3 *man/create_vignette_last_modif.Rd
 2a0634221609dd4169f9fe97112344fd *man/each_pattern.Rd
@@ -41,7 +41,7 @@ c5a975c30abccfdc27025cf110af2ed0 *man/gitdown-package.Rd
 a05bca16ecce423b54824ecea1b5e2d9 *tests/testthat/presentation_commit.md
 ba2a990a098343f32ed1a8ca98b9ed68 *tests/testthat/test-fake_repo.R
 2aa5a3361b249c6f1b7219d3735fa95a *tests/testthat/test-get_commits.R
-5d9a4654b1d5997a7f5ba74ac994f6ed *tests/testthat/test-get_info_files.R
+fe2252ee139593808d1c797fe4607c04 *tests/testthat/test-get_info_files.R
 72a421cb07eb2132cc0cc39bcdaa1a42 *tests/testthat/test-git_down.R
 c6fbb8ca6f6e706cef909e991346177c *tests/testthat/test-utils.R
 d0ee73496ad8763d6885b402f7fce903 *vignettes/ab-create-git_down.Rmd
