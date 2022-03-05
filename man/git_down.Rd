@@ -11,7 +11,7 @@ git_down(
   author = "John Doe",
   pattern = c(Issues = "#[[:digit:]]+"),
   pattern.table = NULL,
-  ref = "master",
+  ref = "main",
   ...
 )
 }
@@ -29,7 +29,7 @@ git_down(
 \item{pattern.table}{data.frame with two columns: pattern and description of the pattern.
 This is used as correspondence table to add some names to existing patterns.}
 
-\item{ref}{the name of the branch, by default master}
+\item{ref}{the name of the branch, by default main}
 
 \item{...}{Other parameters to pass to \code{\link[rmarkdown:render]{rmarkdown::render()}}}
 }
@@ -44,7 +44,7 @@ Each chapter is a group of commits. The first page gives a summary of all the gr
 }
 \examples{
 repo <- fake_repo()
-if (rmarkdown::pandoc_available("1.12.3")) {
+if (rmarkdown::pandoc_available("2.0.0")) {
   res <- git_down(repo, pattern = c("Tickets" = "ticket[[:digit:]]+", "Issues" = "#[[:digit:]]+"),
     open = FALSE)
 }
@@ -56,7 +56,7 @@ if (rmarkdown::pandoc_available("1.12.3")) {
 pattern.table <- data.frame(number = c("#2", "#1"),
   title = c("#2 A second issue to illustrate a blog post",
                        "#1 An example of issue"))
-if (rmarkdown::pandoc_available("1.12.3")) {
+if (rmarkdown::pandoc_available("2.0.0")) {
   res <- git_down(repo, pattern = c("Issues" = "#[[:digit:]]+"),
     pattern.table = pattern.table, open = FALSE)
 }

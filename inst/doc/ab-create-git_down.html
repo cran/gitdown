@@ -362,15 +362,15 @@ If you have your own referencing system for tickets in an external software, you
 <ul>
 <li>Find all commits of a branch and associate with tags recursively</li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_commits_tags</span>(repo, <span class="at">ref =</span> <span class="st">&quot;master&quot;</span>)</span>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_commits_tags</span>(repo, <span class="at">ref =</span> <span class="st">&quot;main&quot;</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4 commits found.</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 4 × 9</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   sha      summary  message      author email when                order tag.name</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;    &lt;chr&gt;    &lt;chr&gt;        &lt;chr&gt;  &lt;chr&gt; &lt;dttm&gt;              &lt;int&gt; &lt;chr&gt;   </span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 b360b1d… Add NEWS &quot;Add NEWS\n… Alice  alic… 2022-01-21 13:47:59     4 &lt;NA&gt;    </span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 c543cce… Third c… &quot;Third comm… Alice  alic… 2022-01-21 13:47:59     3 v0.1    </span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3 d6b20b1… example… &quot;example: m… Alice  alic… 2022-01-21 13:47:59     2 v0.1    </span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4 5249f87… First c… &quot;First comm… Alice  alic… 2022-01-21 13:47:59     1 v0.1    </span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 38ecd05… Add NEWS &quot;Add NEWS\n… Alice  alic… 2022-03-05 20:32:44     4 &lt;NA&gt;    </span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 c1c1588… Third c… &quot;Third comm… Alice  alic… 2022-03-05 20:32:44     3 v0.1    </span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3 13a5e01… example… &quot;example: m… Alice  alic… 2022-03-05 20:32:44     2 v0.1    </span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4 7e0a474… First c… &quot;First comm… Alice  alic… 2022-03-05 20:32:44     1 v0.1    </span></span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # … with 1 more variable: tag.message &lt;chr&gt;</span></span></code></pre></div>
 <ul>
 <li>Find all commits of a branch and detect a specific pattern
@@ -378,18 +378,18 @@ If you have your own referencing system for tickets in an external software, you
 <li>Here we find commits mentioning an issue with <code>#123</code></li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_commits_pattern</span>(repo, <span class="at">pattern =</span> <span class="st">&quot;#[[:digit:]]+&quot;</span>, <span class="at">ref =</span> <span class="st">&quot;master&quot;</span>)</span>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_commits_pattern</span>(repo, <span class="at">pattern =</span> <span class="st">&quot;#[[:digit:]]+&quot;</span>, <span class="at">ref =</span> <span class="st">&quot;main&quot;</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4 commits found.</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 7 × 12</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   sha      summary  message      author email when                order tag.name</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;    &lt;chr&gt;    &lt;chr&gt;        &lt;chr&gt;  &lt;chr&gt; &lt;dttm&gt;              &lt;int&gt; &lt;chr&gt;   </span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 b360b1d… Add NEWS &quot;Add NEWS\n… Alice  alic… 2022-01-21 13:47:59     4 &lt;NA&gt;    </span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 b360b1d… Add NEWS &quot;Add NEWS\n… Alice  alic… 2022-01-21 13:47:59     4 &lt;NA&gt;    </span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3 b360b1d… Add NEWS &quot;Add NEWS\n… Alice  alic… 2022-01-21 13:47:59     4 &lt;NA&gt;    </span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4 c543cce… Third c… &quot;Third comm… Alice  alic… 2022-01-21 13:47:59     3 v0.1    </span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5 c543cce… Third c… &quot;Third comm… Alice  alic… 2022-01-21 13:47:59     3 v0.1    </span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6 d6b20b1… example… &quot;example: m… Alice  alic… 2022-01-21 13:47:59     2 v0.1    </span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 7 5249f87… First c… &quot;First comm… Alice  alic… 2022-01-21 13:47:59     1 v0.1    </span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 38ecd05… Add NEWS &quot;Add NEWS\n… Alice  alic… 2022-03-05 20:32:44     4 &lt;NA&gt;    </span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 38ecd05… Add NEWS &quot;Add NEWS\n… Alice  alic… 2022-03-05 20:32:44     4 &lt;NA&gt;    </span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3 38ecd05… Add NEWS &quot;Add NEWS\n… Alice  alic… 2022-03-05 20:32:44     4 &lt;NA&gt;    </span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4 c1c1588… Third c… &quot;Third comm… Alice  alic… 2022-03-05 20:32:44     3 v0.1    </span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5 c1c1588… Third c… &quot;Third comm… Alice  alic… 2022-03-05 20:32:44     3 v0.1    </span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6 13a5e01… example… &quot;example: m… Alice  alic… 2022-03-05 20:32:44     2 v0.1    </span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 7 7e0a474… First c… &quot;First comm… Alice  alic… 2022-03-05 20:32:44     1 v0.1    </span></span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # … with 4 more variables: tag.message &lt;chr&gt;, pattern.type &lt;chr&gt;,</span></span>
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; #   pattern.content &lt;chr&gt;, pattern.title &lt;chr&gt;</span></span></code></pre></div>
 </div>
@@ -415,20 +415,20 @@ If you have your own referencing system for tickets in an external software, you
 <tr class="odd">
 <td align="left">NEWS.md</td>
 <td align="left">Yes</td>
-<td align="left">2022-01-21 14:47:59</td>
-<td align="left">2022-01-21 14:47:59</td>
+<td align="left">2022-03-05 21:32:44</td>
+<td align="left">2022-03-05 21:32:44</td>
 </tr>
 <tr class="even">
 <td align="left">example.txt</td>
 <td align="left">Yes</td>
-<td align="left">2022-01-21 14:47:59</td>
-<td align="left">2022-01-21 14:47:59</td>
+<td align="left">2022-03-05 21:32:44</td>
+<td align="left">2022-03-05 21:32:44</td>
 </tr>
 <tr class="odd">
 <td align="left">R/my_mean.R</td>
 <td align="left">No</td>
 <td align="left">NA</td>
-<td align="left">2022-01-21 14:47:59</td>
+<td align="left">2022-03-05 21:32:44</td>
 </tr>
 </tbody>
 </table>

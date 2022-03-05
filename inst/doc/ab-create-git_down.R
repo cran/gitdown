@@ -16,10 +16,10 @@ repo <- fake_repo()
 #  git_down(repo, pattern = c("Tickets" = "ticket[[:digit:]]+", "Issues" = "#[[:digit:]]+"))
 
 ## -----------------------------------------------------------------------------
-get_commits_tags(repo, ref = "master")
+get_commits_tags(repo, ref = "main")
 
 ## -----------------------------------------------------------------------------
-get_commits_pattern(repo, pattern = "#[[:digit:]]+", ref = "master")
+get_commits_pattern(repo, pattern = "#[[:digit:]]+", ref = "main")
 
 ## ---- eval=FALSE--------------------------------------------------------------
 #  repo_pkg <- fake_repo(as.package = TRUE)

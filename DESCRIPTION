@@ -1,6 +1,6 @@
 Package: gitdown
 Title: Turn Your Git Commit Messages into a HTML Book
-Version: 0.1.5
+Version: 0.1.6
 Authors@R: c(
     person("Sébastien", "Rochette", , "sebastien@thinkr.fr", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-1565-9313")),
@@ -27,11 +27,11 @@ Config/testthat/edition: 3
 Encoding: UTF-8
 RoxygenNote: 7.1.2
 NeedsCompilation: no
-Packaged: 2022-01-21 13:48:00 UTC; srochett
+Packaged: 2022-03-05 20:32:45 UTC; srochett
 Author: Sébastien Rochette [aut, cre] (<https://orcid.org/0000-0002-1565-9313>),
   Cervan Girard [aut] (<https://orcid.org/0000-0002-4816-4624>),
   ThinkR [cph],
   Institut de Recherches Internationales Servier [spn]
 Maintainer: Sébastien Rochette <sebastien@thinkr.fr>
 Repository: CRAN
-Date/Publication: 2022-01-21 15:32:42 UTC
+Date/Publication: 2022-03-05 20:40:02 UTC
